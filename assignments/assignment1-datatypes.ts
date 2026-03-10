@@ -29,7 +29,7 @@ console.log(`Person's favourite colour:${color}`);
 let year:number = 2023;
 console.log(`Current year:${year}`);
 // 11.Number of followers on a social media platform: 1,000,000
-let followers : number = 1_000_000
+let followers : string = "1,000,000"
 console.log(`Number of followers on a social media platform:${followers}`);
 // 12.Rating of a movie: 7.5
 const rating : number  = 7.5;
