@@ -8,9 +8,9 @@ interface custData {
 
 let customer : custData = {
     customerName : "John Doe",
-    creditScore  : 600,
+    creditScore  : 670,
     income       : 55000.0,
-    isEmployed   : false,
+    isEmployed   : true,
     debtToIncomeRatio:35.0
 }
 let loanFlag:boolean = false
@@ -24,10 +24,10 @@ function loanEligibility(customer:custData):boolean {
                 if (!customer.isEmployed){
                     console.log (`Dear ${customer.customerName}, your Loan is Rejected as Emplyment Status is ${customer.isEmployed}`);
                 }else if (customer.debtToIncomeRatio>40){
-                    console.log (`Dear ${customer.customerName}, your loan is Rejected for having Debt to Income Ratio > 40`);
+                    console.log (`Dear ${customer.customerName}, your loan is Rejected for having Debt to Income Ratio > 40%`);
                 }else {
                     loanFlag = true;
-                    console.log (`Dear ${customer.customerName}, your loan is approved for having income > ${customer.income}, Employment Status as ${customer.isEmployed} and Debt to Income Ratio as ${customer.debtToIncomeRatio}`);
+                    console.log (`Dear ${customer.customerName}, your loan is approved for having income : ${customer.income}, Employment Status as: ${customer.isEmployed} and Debt to Income Ratio : ${customer.debtToIncomeRatio}%`);
                 }
             }else{
                 console.log (`Dear ${customer.customerName}, your Loan is Rejected as Income is < 55000`);
@@ -38,4 +38,4 @@ function loanEligibility(customer:custData):boolean {
     return loanFlag; 
     }
 
-loanEligibility(customer) ? "Loan Approved for the Customer" : "Loan Rejected"
+loanEligibility(customer)
